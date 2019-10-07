@@ -1,15 +1,40 @@
 {
-	"name": "sjelfull/discourse",
-	"description": "Single Sign-On for Discourse",
-	"type": "craft-plugin",
-	"authors": [
-		{
-			"name": "Superbig",
-			"homepage": "https://superbig.co"
-		}
-	],
-	"require": {
-		"composer/installers": "~1.0",
-		"cviebrock/discourse-php": "^0.9.2"
-	}
+  "name": "sjelfull/discourse",
+  "description": "Single Sign-On for Discourse",
+  "type": "craft-plugin",
+  "keywords": [
+    "craft",
+    "cms",
+    "craftcms",
+    "craft-plugin",
+    "discourse"
+  ],
+  "support": {
+    "docs": "https://github.com/sjelfull/discourse/blob/master/README.md",
+    "issues": "https://github.com/sjelfull/discourse/issues"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Superbig",
+      "homepage": "https://superbig.co"
+    }
+  ],
+  "require": {
+    "craftcms/cms": "^3.0.0-RC1",
+    "cviebrock/discourse-php": "^0.9.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "superbig\\discourse\\": "src/"
+    }
+  },
+  "extra": {
+    "name": "Discourse",
+    "handle": "discourse",
+    "hasCpSettings": true,
+    "hasCpSection": false,
+    "changelogUrl": "https://raw.githubusercontent.com/sjelfull/discourse/master/CHANGELOG.md",
+    "class": "superbig\\discourse\\Plugin"
+  }
 }
